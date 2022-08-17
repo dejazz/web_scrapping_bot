@@ -1,22 +1,20 @@
 from playwright.async_api import async_playwright
+from utils.create_dict import create_dict
+import asyncio
 
-
-class BotScraping:
-    async def scraping(self):
-
-
-        async with async_playwright() as pw:
-            browser = await pw.chromium.launch()
-            page = await browser.new_page()
-            await page.goto(
-                "https://webscraper.io/test-sites/e-commerce/allinone/computers/laptops"
-            )
-            all_notebooks = await page.locator(
-                ".col-sm-4.col-lg-4.col-md-4"
-            ).element_handles()
+async def main():
+    async with async_playwright() as pw:
+        browser = await pw.chromium.launch()
+        page = await browser.new_page()
+        await page.goto(
+            "https://webscraper.io/test-sites/e-commerce/allinone/computers/laptops"
+        )
+        all_notebooks = await page.locator(
+            ".col-sm-4.col-lg-4.col-md-4"
+        ).element_handles()
 
         lenovo_notebooks = []
-        for notebook in all_notebooks:
+        for notebook in  all_notebooks:
 
             filter_notebook = "lenovo"
 
@@ -26,7 +24,7 @@ class BotScraping:
             ):
 
                 notebook_item = {
-                    "product_id": f"{notebook.query_selector('.title').get_attribute('href')[-3:]}",
+                    "product_id":f"{notebook.query_selector('.title').get_attribute('href')[-3:]}",
                     "title": notebook.query_selector(".title").get_attribute("title"),
                     "description": notebook.query_selector(".description").inner_text(),
                     "price": notebook.query_selector(".pull-right.price").inner_text(),
@@ -48,3 +46,8 @@ class BotScraping:
                 ]
                 lenovo_notebooks.append(dict(sorted(notebook_item.items())))
         return lenovo_notebooks
+
+if __name__ == '__main__':
+    result = asyncio.run(main())
+    import ipdb
+    ipdb.set_trace()    
