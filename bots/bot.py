@@ -9,6 +9,7 @@ class BotScraping:
 
     lenovo_notebooks = []
     filter_item = "lenovo"
+    all_notebooks = []
 
     async def scraping(self, deep: bool = False):
 
@@ -16,9 +17,21 @@ class BotScraping:
             browser = await pw.chromium.launch()
             page = await browser.new_page()
             await page.goto(URL_SCRAPING)
-            all_notebooks = await page.locator(NOTEBOOKS_LOCATOR).element_handles()
+            self.all_notebooks = await page.locator(NOTEBOOKS_LOCATOR).element_handles()
+            
+            await self.data_processing_scraping(deep,browser)
+            
 
-            for notebook in all_notebooks:
+        return self.lenovo_notebooks
+
+    def storage_elements_scraping(self, data: dict):
+
+        self.lenovo_notebooks.append(dict(sorted(data.items())))
+
+
+    async def data_processing_scraping(self,deep,browser):
+
+        for notebook in self.all_notebooks:
 
                 comparison_item = await notebook.query_selector(".title")
                 validate_item = await comparison_item.inner_text()
@@ -49,7 +62,9 @@ class BotScraping:
                         "starts": int(len(starts)),
                         "product_url": f"https://webscraper.io/{await product_infos.get_attribute('href')}",
                     }
+
                     self.storage_elements_scraping(lenovo_notebook)
+
                     if deep:
                         page_notebook = await browser.new_page()
 
@@ -74,8 +89,4 @@ class BotScraping:
                         ]
                         self.storage_elements_scraping(lenovo_notebook)
 
-        return self.lenovo_notebooks
 
-    def storage_elements_scraping(self, data: dict):
-
-        self.lenovo_notebooks.append(dict(sorted(data.items())))
