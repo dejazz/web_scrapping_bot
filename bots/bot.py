@@ -3,7 +3,7 @@ from utils.create_dict import create
 
 class BotScraping():
 
-    def scraping():
+    def scraping(self):
         with sync_playwright() as pw:
             browser = pw.chromium.launch(headless=False)
             page = browser.new_page()
