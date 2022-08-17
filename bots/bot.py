@@ -1,5 +1,5 @@
 from playwright.sync_api import sync_playwright
-from utils.create_dict import create
+from utils.create_dict import create_dict
 
 class BotScraping():
 
@@ -12,9 +12,7 @@ class BotScraping():
             )
             all_notebooks = page.locator(".col-sm-4.col-lg-4.col-md-4").element_handles()
 
-            all_lenovo_notebooks = []
+            response = create_dict(all_notebooks,browser=browser)
 
-            response = create(all_notebooks)
-            all_lenovo_notebooks.append(response)
-            return all_lenovo_notebooks
+            return response
 

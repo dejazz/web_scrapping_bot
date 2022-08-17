@@ -1,4 +1,4 @@
-def create(all_items: list,browser):
+def create_dict(all_items: list,browser):
     lenovo_notebooks = []
     for notebook in all_items:
 
