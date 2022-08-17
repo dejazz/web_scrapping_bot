@@ -1,15 +1,14 @@
-FROM python:3.9.13-buster
+FROM ubuntu:20.04
 
-WORKDIR /playwright_test
+RUN apt update
+RUN apt install -y python3.9
+RUN apt install -y python3-pip
 
-COPY requirements.txt requirements.txt
-RUN pip3 install -r requirements.txt
-RUN playwright install chromium
+COPY app/ /app
+WORKDIR /app
 
-COPY . .
+RUN pip install -r requirements.txt
 
-RUN useradd -m myuser
-USER myuser
+RUN playwright install --with-deps chromium
 
-         
-CMD python3 playwright_test/pw_codegen.py
+CMD ....
