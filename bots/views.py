@@ -3,13 +3,24 @@ from rest_framework.views import APIView, status
 from rest_framework.response import Response
 import time
 import asyncio
-from bots.bot import BotScraping
+
+from .bot import BotScraping
+
 
 
 class botView(APIView):
-    async def get(self, request):
+      def get(self, request):
       
         bot = BotScraping()
-        response = asyncio.run(bot.scrapping())
+        response = asyncio.run(bot.scraping())
+       
         return Response(response,status.HTTP_200_OK)
-   
+
+
+class BotViewOnDeep(APIView):
+       def get(self, request):
+      
+        bot = BotScraping()
+        response = asyncio.run(bot.scraping(deep=True))
+       
+        return Response(response,status.HTTP_200_OK)
