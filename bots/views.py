@@ -10,12 +10,14 @@ from .bot import BotScraping
 
 class botView(APIView):
       def get(self, request):
-      
-        bot = BotScraping()
-        response = asyncio.run(bot.scraping())
-       
-        return Response(response,status.HTTP_200_OK)
+        try:
 
+          bot = BotScraping()
+          response = asyncio.run(bot.scraping())
+       
+          return Response(response,status.HTTP_200_OK)
+        except:
+          return Response({"Detail":"site not found"},status.HTTP_404_NOT_FOUND)
 
 class BotViewOnDeep(APIView):
        def get(self, request):

@@ -25,7 +25,7 @@ async def main(deep=False):
                 
                 product_id = await notebook.query_selector('.title')
 
-                lenovo_notebook['product_id'] = int(str(await product_id.get_attribute('href'))[-3:]
+                lenovo_notebook['product_id'] = str(await product_id.get_attribute('href'))
                 title = await notebook.query_selector('.title')
                 lenovo_notebook['title'] = await title.get_attribute('title')
 
