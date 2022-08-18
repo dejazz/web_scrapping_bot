@@ -116,9 +116,5 @@ RETORNO: __STATUS 200 OK__
 
         ]
         
-RETORNO 404 NOT FOUND:
 
-    {
-        "Detail": "site not found"
-    }
 
