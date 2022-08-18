@@ -86,6 +86,7 @@ class BotScraping:
                             f"{await hdd_unavailable.inner_text()}GB"
                             for hdd_unavailable in storages_unavailable
                         ]
+                        
                     self.storage_elements_scraping(lenovo_notebook)
 
 
