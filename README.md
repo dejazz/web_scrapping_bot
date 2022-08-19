@@ -25,7 +25,7 @@
 
 ###  -  __End-point para busca na página inicial do site__
 
-__GET base_url/api/scraping/__<br>
+GET __base_url/api/scraping/__<br>
  <span>Full url: http://ec2-18-205-114-89.compute-1.amazonaws.com:8000/api/scraping</span>
 
 RETORNO: __STATUS 200 OK__
