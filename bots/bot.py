@@ -63,7 +63,7 @@ class BotScraping:
                         "product_url": f"https://webscraper.io/{await product_infos.get_attribute('href')}",
                     }
 
-
+                    
                     if deep:
                         page_notebook = await browser.new_page()
 
@@ -86,7 +86,8 @@ class BotScraping:
                             f"{await hdd_unavailable.inner_text()}GB"
                             for hdd_unavailable in storages_unavailable
                         ]
+                        self.storage_elements_scraping(lenovo_notebook)
+                    self.storage_elements_scraping(lenovo_notebook)    
                         
-                    self.storage_elements_scraping(lenovo_notebook)
 
 

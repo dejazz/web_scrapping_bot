@@ -1,14 +1,22 @@
-FROM ubuntu:20.04
+FROM ubuntu:focal
 
 RUN apt update
+
 RUN apt install -y python3.9
+
 RUN apt install -y python3-pip
 
-COPY app/ /app
 WORKDIR /app
 
-RUN pip install -r requirements.txt
+COPY requirements.txt .
 
-RUN playwright install --with-deps chromium
+RUN pip install -r requirements.txt 
 
-CMD ....
+RUN playwright install --with-deps
+
+COPY . /app
+
+EXPOSE 8000
+
+
+
