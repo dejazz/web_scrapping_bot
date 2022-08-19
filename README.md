@@ -1,16 +1,17 @@
 # web_scraping_bot
 
 ## Informações
-<div>
+<article>
     Essa api foi criada com o intuito de obter todos os notebooks Lenovo do site: https://webscraper.io/test-sites/e-commerce/allinone/computers/laptops.     Essa api conta com dois end-points de retorno do que o bot encontrou. Sendo o primeiro a ocorrência de todas as informações de cada notebook Lenovo       na página geral dos produtos. E o segundo end-point o bot trás também as informação da página individual de cada notebook.
-</div>
-## Base_URL
+</article>
+
+<h2>Base_URL</h2>
 
     A base url da api:
     - http://ec2-18-205-114-89.compute-1.amazonaws.com:8000
 
 
-## END-POINTS
+<h2>End-points</h2>
 
 ###  -  __End-point para busca na página inicial do site__
 
