@@ -20,14 +20,13 @@
 
     A base url da api:
     - http://ec2-18-205-114-89.compute-1.amazonaws.com:8000
-
-
+   
 <h2>End-points</h2>
 
 ###  -  __End-point para busca na página inicial do site__
 
 __GET base_url/api/scraping/__<br>
-   
+ <span>Full url: http://ec2-18-205-114-89.compute-1.amazonaws.com:8000/api/scraping</span>
 
 RETORNO: __STATUS 200 OK__
 
