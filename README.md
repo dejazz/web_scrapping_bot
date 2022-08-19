@@ -2,7 +2,7 @@
 
 ## Informações
 <article>
-    <p>Essa api foi criada com o intuito de obter todos os notebooks Lenovo do site: <a href="https://webscraper.io/test-sites/e-commerce/allinone/computers/laptops">CLique aqui para verificar</a>. Essa api conta com dois end-points de retorno do que o bot encontrou. Sendo o primeiro a ocorrência de todas as informações de cada notebook Lenovo       na página geral dos produtos. E o segundo end-point o bot trás também as informação da página individual de cada notebook.</a>
+    <p>Essa api foi criada com o intuito de obter todos os notebooks Lenovo do site: <a href="https://webscraper.io/test-sites/e-commerce/allinone/computers/laptops" target="_blank">Clique aqui para verificar</a>. Essa api conta com dois end-points de retorno do que o bot encontrou. Sendo o primeiro a ocorrência de todas as informações de cada notebook Lenovo       na página geral dos produtos. E o segundo end-point o bot trás também as informação da página individual de cada notebook.</a>
 </article>
 
 <h2>Base_URL</h2>
