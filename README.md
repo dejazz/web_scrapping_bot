@@ -6,7 +6,7 @@
 ## Base_URL
 
     A base url da api:
-    - ......
+    - http://ec2-18-205-114-89.compute-1.amazonaws.com:8000
 
 
 ## END-POINTS
@@ -61,13 +61,8 @@ RETORNO: __STATUS 200 OK__
 
         ]
 
-RETORNO 404 NOT FOUND:
 
-    {
-        "Detail": "site not found"
-    }
-
-###  -  __End-point para busca individual de cada produto__
+###  -  __End-point para uma busca mais aprofundada de cada produto__
 
 
 __GET base_url/api/scraping/deep__<br>
