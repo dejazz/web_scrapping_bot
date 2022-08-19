@@ -1,7 +1,7 @@
 from playwright.async_api import async_playwright
 
 URL_SCRAPING = "https://webscraper.io/test-sites/e-commerce/allinone/computers/laptops"
- 
+
 NOTEBOOKS_LOCATOR = ".col-sm-4.col-lg-4.col-md-4"
 
 
@@ -19,7 +19,7 @@ class BotScraping:
             page = await browser.new_page()
             await page.goto(URL_SCRAPING)
             self.all_notebooks = await page.locator(NOTEBOOKS_LOCATOR).element_handles()
-            
+            self.lenovo_notebooks = []
             for notebook in self.all_notebooks:
 
                 comparison_item = await notebook.query_selector(".title")
@@ -52,16 +52,13 @@ class BotScraping:
                         "product_url": f"https://webscraper.io/{await product_infos.get_attribute('href')}",
                     }
 
-                    self.storage_elements_scraping(lenovo_notebook)    
-            
+                    self.storage_elements_scraping(lenovo_notebook)
 
         return self.lenovo_notebooks
 
     def storage_elements_scraping(self, data: dict):
 
         self.lenovo_notebooks.append(dict(sorted(data.items())))
-
-
 
     async def scraping_deep(self):
 
@@ -70,7 +67,7 @@ class BotScraping:
             page = await browser.new_page()
             await page.goto(URL_SCRAPING)
             self.all_notebooks = await page.locator(NOTEBOOKS_LOCATOR).element_handles()
-            
+
             for notebook in self.all_notebooks:
 
                 comparison_item = await notebook.query_selector(".title")
@@ -103,8 +100,6 @@ class BotScraping:
                         "product_url": f"https://webscraper.io/{await product_infos.get_attribute('href')}",
                     }
 
-                    
-                   
                     page_notebook = await browser.new_page()
 
                     await page_notebook.goto(
@@ -127,7 +122,8 @@ class BotScraping:
                         for hdd_unavailable in storages_unavailable
                     ]
 
-                    self.lenovo_deep_notebooks.append(dict(sorted(lenovo_notebook.items())))
-    
-                
+                    self.lenovo_deep_notebooks.append(
+                        dict(sorted(lenovo_notebook.items()))
+                    )
+
         return self.lenovo_deep_notebooks
