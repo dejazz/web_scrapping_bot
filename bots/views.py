@@ -20,6 +20,6 @@ class BotViewOnDeep(APIView):
     def get(self, request):
 
         bot = BotScraping()
-        response = asyncio.run(bot.scraping(deep=True))
+        response = asyncio.run(bot.scraping_deep())
 
         return Response(response, status.HTTP_200_OK)
