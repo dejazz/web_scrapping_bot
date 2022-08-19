@@ -2,8 +2,19 @@
 
 ## Informações
 <article>
-    <p>Essa api foi criada com o intuito de obter todos os notebooks Lenovo do site: <a href="https://webscraper.io/test-sites/e-commerce/allinone/computers/laptops" target="_blank">Clique aqui para verificar</a>. Essa api conta com dois end-points de retorno do que o bot encontrou. Sendo o primeiro a ocorrência de todas as informações de cada notebook Lenovo       na página geral dos produtos. E o segundo end-point o bot trás também as informação da página individual de cada notebook.</a>
+    <p>Essa api foi criada com o intuito de obter todos os notebooks Lenovo do site: <a href="https://webscraper.io/test-sites/e-commerce/allinone/computers/laptops" target="_blank">WebScrap</a>. Essa api conta com dois end-points de retorno do que o bot encontrou. Sendo o primeiro a ocorrência de todas as informações de cada notebook Lenovo       na página geral dos produtos. E o segundo end-point o bot trás também as informação da página individual de cada notebook.</a>
 </article>
+
+
+<h2>Tecnologias Utilizadas</h2>
+
+  <ul>
+    <li>Linguagem utilizada: <strong>Python</strong></li>  
+    <li>Para criação do bot foi utilizada a biblioteca <a href="https://playwright.dev/" target="_blank">Playwright</a></li>
+    <li>Para criação de REST api foi utilizado o framework de python <a href="https://www.djangoproject.com/" target="_blank">Django</a></li>
+    <li>Para conteinerização foi utilizado  <a href="https://www.docker.com/" target="_blank">Docker</a></li>
+    <li>Para hospedagem do bot foi utilizado o  <a href="https://aws.amazon.com/pt/?nc2=h_lg" target="_blank">AWS EC2</a></li>
+  </ul>
 
 <h2>Base_URL</h2>
 
