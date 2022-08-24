@@ -105,24 +105,7 @@ class BotScraping:
                     await page_notebook.goto(
                         f"https://webscraper.io/{await product_infos.get_attribute('href')}"
                     )
-
-                    # storages = await page_notebook.locator(
-                    #     ".btn.swatch"
-                    # ).element_handles()
-
-                    # storages_unavailable = await page_notebook.locator(
-                    #     ".btn.swatch.disabled"
-                    # ).element_handles()
-
-                    # lenovo_notebook["hdd"] = [
-                    #     f"{await hdd.inner_text()}GB" for hdd in storages
-                    # ][:-1]
-
-                    # lenovo_notebook["hdd_unavailable"] = [
-                    #     f"{await hdd_unavailable.inner_text()}GB"
-                    #     for hdd_unavailable in storages_unavailable
-                    # ]
-                    
+           
                     click_page = await page_notebook.query_selector_all(".btn.swatch")
                     for hdd_bottom in click_page:
                         elem = await hdd_bottom.click()
@@ -132,8 +115,7 @@ class BotScraping:
                         hdd = f"{await hdd_bottom.inner_text()}GB"
                         price_hdd.append({hdd:await price.inner_text()})
 
-                    lenovo_notebook["hdd_unavailable_and_price"] = price_hdd[:-3]
-                    lenovo_notebook["hdd_and_price"] = price_hdd[-3:]
+                    lenovo_notebook["hdd_and_price"] = price_hdd
 
                     self.lenovo_deep_notebooks.append(dict(sorted(lenovo_notebook.items())))
 
