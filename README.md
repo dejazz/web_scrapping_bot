@@ -77,10 +77,13 @@ GET __base_url/api/scraping/deep__<br>
 
 RETORNO: __STATUS 200 OK__
 
-        [
+[
 	{
 		"description": "Lenovo V110-15IAP, 15.6\" HD, Celeron N3350 1.1GHz, 4GB, 128GB SSD, Windows 10 Home",
 		"hdd_and_price": [
+			{
+				"128GB": "$321.94"
+			},
 			{
 				"256GB": "$341.94"
 			},
@@ -89,11 +92,6 @@ RETORNO: __STATUS 200 OK__
 			},
 			{
 				"1024GB": "$381.94"
-			}
-		],
-		"hdd_unavailable_and_price": [
-			{
-				"128GB": "$321.94"
 			}
 		],
 		"price": "$321.94",
@@ -107,6 +105,9 @@ RETORNO: __STATUS 200 OK__
 		"description": "Lenovo ThinkPad E31-80, 13.3\" HD, Celeron 3855U 1.6GHz, 4GB, 128GB SSD, Windows 10 Home",
 		"hdd_and_price": [
 			{
+				"128GB": "$404.23"
+			},
+			{
 				"256GB": "$424.23"
 			},
 			{
@@ -114,11 +115,6 @@ RETORNO: __STATUS 200 OK__
 			},
 			{
 				"1024GB": "$464.23"
-			}
-		],
-		"hdd_unavailable_and_price": [
-			{
-				"128GB": "$404.23"
 			}
 		],
 		"price": "$404.23",
