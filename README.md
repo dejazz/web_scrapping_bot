@@ -72,3 +72,59 @@ RETORNO: __STATUS 200 OK__
         ...
 
         ]
+
+GET __base_url/api/scraping/deep__<br>
+
+RETORNO: __STATUS 200 OK__
+
+        [
+	{
+		"description": "Lenovo V110-15IAP, 15.6\" HD, Celeron N3350 1.1GHz, 4GB, 128GB SSD, Windows 10 Home",
+		"hdd": [
+			"128GB",
+			"256GB",
+			"512GB"
+		],
+		"hdd_unavailable": [
+			"1024GB"
+		],
+		"price": "$321.94",
+		"price_hdd_avaibility": [
+			"$341.94",
+			"$361.94",
+			"$381.94"
+		],
+		"price_hdd_availability": [
+			"$321.94"
+		],
+		"product_id": 548,
+		"product_url": "https://webscraper.io//test-sites/e-commerce/allinone/product/548",
+		"reviews": "5 reviews",
+		"starts": 3,
+		"title": "Lenovo V110-15IAP"
+	},
+	{
+		"description": "Lenovo ThinkPad E31-80, 13.3\" HD, Celeron 3855U 1.6GHz, 4GB, 128GB SSD, Windows 10 Home",
+		"hdd": [
+			"128GB",
+			"256GB",
+			"512GB"
+		],
+		"hdd_unavailable": [
+			"1024GB"
+		],
+		"price": "$404.23",
+		"price_hdd_avaibility": [
+			"$424.23",
+			"$444.23",
+			"$464.23"
+		],
+		"price_hdd_availability": [
+			"$404.23"
+		],
+		"product_id": 557,
+		"product_url": "https://webscraper.io//test-sites/e-commerce/allinone/product/557",
+		"reviews": "12 reviews",
+		"starts": 1,
+		"title": "Lenovo ThinkPad E31-80"
+	},
