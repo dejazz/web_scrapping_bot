@@ -2,7 +2,7 @@
 
 ## Informações
 <article>
-    <p>Essa api foi criada com o intuito de obter todos os notebooks Lenovo do site: <a href="https://webscraper.io/test-sites/e-commerce/allinone/computers/laptops" target="_blank">WebScrap</a>. Essa api conta com dois end-points de retorno do que o bot encontrou. Sendo o primeiro a ocorrência de todas as informações de cada notebook Lenovo       na página geral dos produtos. E o segundo end-point o bot trás também as informação da página individual de cada notebook.</a>
+    <p>Essa api foi criada com o intuito de obter todos os notebooks Lenovo do site: <a href="https://webscraper.io/test-sites/e-commerce/allinone/computers/laptops" target="_blank">WebScrap</a>. A api conta com um end-point de retorno  com o resultado da busca. </a>
 </article>
 
 
@@ -72,3 +72,59 @@ RETORNO: __STATUS 200 OK__
         ...
 
         ]
+
+GET __base_url/api/scraping/deep__<br>
+
+RETORNO: __STATUS 200 OK__
+
+        [
+	{
+		"description": "Lenovo V110-15IAP, 15.6\" HD, Celeron N3350 1.1GHz, 4GB, 128GB SSD, Windows 10 Home",
+		"hdd_and_price": [
+			{
+				"256GB": "$341.94"
+			},
+			{
+				"512GB": "$361.94"
+			},
+			{
+				"1024GB": "$381.94"
+			}
+		],
+		"hdd_unavailable_and_price": [
+			{
+				"128GB": "$321.94"
+			}
+		],
+		"price": "$321.94",
+		"product_id": 548,
+		"product_url": "https://webscraper.io//test-sites/e-commerce/allinone/product/548",
+		"reviews": "5 reviews",
+		"starts": 3,
+		"title": "Lenovo V110-15IAP"
+	},
+	{
+		"description": "Lenovo ThinkPad E31-80, 13.3\" HD, Celeron 3855U 1.6GHz, 4GB, 128GB SSD, Windows 10 Home",
+		"hdd_and_price": [
+			{
+				"256GB": "$424.23"
+			},
+			{
+				"512GB": "$444.23"
+			},
+			{
+				"1024GB": "$464.23"
+			}
+		],
+		"hdd_unavailable_and_price": [
+			{
+				"128GB": "$404.23"
+			}
+		],
+		"price": "$404.23",
+		"product_id": 557,
+		"product_url": "https://webscraper.io//test-sites/e-commerce/allinone/product/557",
+		"reviews": "12 reviews",
+		"starts": 1,
+		"title": "Lenovo ThinkPad E31-80"
+	},
