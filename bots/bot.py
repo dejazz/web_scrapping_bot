@@ -15,7 +15,7 @@ class BotScraping:
     async def scraping(self, deep: bool = False):
 
         async with async_playwright() as pw:
-            browser = await pw.chromium.launch(headless=False)
+            browser = await pw.chromium.launch()
             page = await browser.new_page()
             await page.goto(URL_SCRAPING)
             self.all_notebooks = await page.locator(NOTEBOOKS_LOCATOR).element_handles()
