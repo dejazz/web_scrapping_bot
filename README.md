@@ -77,50 +77,50 @@ GET __base_url/api/scraping/deep__<br>
 
 RETORNO: __STATUS 200 OK__
 
-[
-	{
-		"description": "Lenovo V110-15IAP, 15.6\" HD, Celeron N3350 1.1GHz, 4GB, 128GB SSD, Windows 10 Home",
-		"hdd_and_price": [
-			{
-				"128GB": "$321.94"
-			},
-			{
-				"256GB": "$341.94"
-			},
-			{
-				"512GB": "$361.94"
-			},
-			{
-				"1024GB": "$381.94"
-			}
-		],
-		"price": "$321.94",
-		"product_id": 548,
-		"product_url": "https://webscraper.io//test-sites/e-commerce/allinone/product/548",
-		"reviews": "5 reviews",
-		"starts": 3,
-		"title": "Lenovo V110-15IAP"
-	},
-	{
-		"description": "Lenovo ThinkPad E31-80, 13.3\" HD, Celeron 3855U 1.6GHz, 4GB, 128GB SSD, Windows 10 Home",
-		"hdd_and_price": [
-			{
-				"128GB": "$404.23"
-			},
-			{
-				"256GB": "$424.23"
-			},
-			{
-				"512GB": "$444.23"
-			},
-			{
-				"1024GB": "$464.23"
-			}
-		],
-		"price": "$404.23",
-		"product_id": 557,
-		"product_url": "https://webscraper.io//test-sites/e-commerce/allinone/product/557",
-		"reviews": "12 reviews",
-		"starts": 1,
-		"title": "Lenovo ThinkPad E31-80"
-	},
+	[
+		{
+			"description": "Lenovo V110-15IAP, 15.6\" HD, Celeron N3350 1.1GHz, 4GB, 128GB SSD, Windows 10 Home",
+			"hdd_and_price": [
+				{
+					"128GB": "$321.94"
+				},
+				{
+					"256GB": "$341.94"
+				},
+				{
+					"512GB": "$361.94"
+				},
+				{
+					"1024GB": "$381.94"
+				}
+			],
+			"price": "$321.94",
+			"product_id": 548,
+			"product_url": "https://webscraper.io//test-sites/e-commerce/allinone/product/548",
+			"reviews": "5 reviews",
+			"starts": 3,
+			"title": "Lenovo V110-15IAP"
+		},
+		{
+			"description": "Lenovo ThinkPad E31-80, 13.3\" HD, Celeron 3855U 1.6GHz, 4GB, 128GB SSD, Windows 10 Home",
+			"hdd_and_price": [
+				{
+					"128GB": "$404.23"
+				},
+				{
+					"256GB": "$424.23"
+				},
+				{
+					"512GB": "$444.23"
+				},
+				{
+					"1024GB": "$464.23"
+				}
+			],
+			"price": "$404.23",
+			"product_id": 557,
+			"product_url": "https://webscraper.io//test-sites/e-commerce/allinone/product/557",
+			"reviews": "12 reviews",
+			"starts": 1,
+			"title": "Lenovo ThinkPad E31-80"
+		},
