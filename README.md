@@ -26,8 +26,8 @@
 ###  -  __End-point para busca na página inicial do site__
 
 GET __base_url/api/scraping/__<br>
- <span>Full url: http://ec2-18-205-114-89.compute-1.amazonaws.com:8000/api/scraping</span>
-
+ <span>Api funcionando apenas localmente</span>
+ <p>Para testar será preciso clonar o repositório e clonar as dependência do projeto. Além de necessitar rodar: playwright install</p>
 RETORNO: __STATUS 200 OK__
 
 
